@@ -11,6 +11,7 @@ struct DoubleLL
 DoubleLL *Insert(DoubleLL *head, int num, int pos);
 void PrintList(DoubleLL *head);
 DoubleLL *Remove(DoubleLL *head, int pos);
+void DeleteDoubleLL(DoubleLL *head);
 
 void PrintList(DoubleLL *head)
 {
@@ -105,6 +106,20 @@ DoubleLL *Remove(DoubleLL *head, int pos)
 	return head;
 }
 
+void DeleteDoubleLL(DoubleLL *head)
+{
+	if (head != NULL)
+	{
+		DeleteDoubleLL(head->next);
+		delete(head);
+		return ;
+	}
+	else
+	{
+		return ;
+	}
+}
+
 int main(void)
 {
 	DoubleLL *temp = NULL;
@@ -116,4 +131,5 @@ int main(void)
 	PrintList(temp);
 	temp = Remove(temp, 4);
 	PrintList(temp);
+	DeleteDoubleLL(temp);
 }
