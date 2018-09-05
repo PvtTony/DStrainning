@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/tony/Github/DStrainning/sort/common.cpp
+
+/Users/tony/Github/DStrainning/sort/common.h
+
+/Users/tony/Github/DStrainning/sort/main.cpp
+iostream
+-
+quicksort.h
+/Users/tony/Github/DStrainning/sort/quicksort.h
+
+/Users/tony/Github/DStrainning/sort/quicksort.cpp
+quicksort.h
+/Users/tony/Github/DStrainning/sort/quicksort.h
+common.h
+/Users/tony/Github/DStrainning/sort/common.h
+
+/Users/tony/Github/DStrainning/sort/quicksort.h
+

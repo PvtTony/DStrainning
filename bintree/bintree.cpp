@@ -60,6 +60,19 @@ void PreOrderPrintTree(TreeNode *tree)
 	}
 }
 
+void ReverseTree(TreeNode *tree)
+{
+	if (tree != NULL)
+	{
+		TreeNode *temp = tree->right;
+		tree->right = tree->left;
+		tree->left = temp;
+		ReverseTree(tree->left);
+		ReverseTree(tree->right);
+	}
+		
+}
+
 void InOrderPrintTree(TreeNode *tree)
 {
 	if (tree != NULL)
@@ -123,6 +136,9 @@ int main(void)
 	InOrderPrintTree(test);
 	cout << endl << "Post Order: " << endl;
 	PostOrderPrintTree(test);
+	ReverseTree(test);
+	cout << endl << "After Reversed: " << endl;
+	PreOrderPrintTree(test);
 	cout << endl << "Node Num: " << GetNodeNum(test) << endl;
 	cout << "Tree Depth: " << GetTreeDepth(test) << endl;
 	cout << "Tree Leaf Node Num: " << GetLeafNodeNum(test) << endl;
